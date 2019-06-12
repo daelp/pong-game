@@ -18,7 +18,7 @@ const ball = {
     radius : 10,
     velocityX : 5,
     velocityY : 5,
-    speed : 7,
+    speed : 8,
     color : "WHITE"
 }
 
@@ -140,7 +140,7 @@ function update(){
         ball.velocityX = direction * ball.speed * Math.cos(angleRad);
         ball.velocityY = ball.speed * Math.sin(angleRad);
 
-        ball.speed += 0.1;
+        ball.speed += 0.2;
     }
 }
 
@@ -164,5 +164,5 @@ function game(){
     update();
     render();
 }
-var framePerSecond = 50;
+var framePerSecond = 60;
 var loop = setInterval(game,1000/framePerSecond);
